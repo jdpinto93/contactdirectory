@@ -18,7 +18,7 @@ WORKDIR /app
 COPY . .
 
 # Instala las dependencias de Composer
-RUN composer install
+RUN composer install --prefer-dist --no-dev --no-scripts --no-autoloader
 
 # Instala Laravel Octane y RoadRunner
 RUN composer require laravel/octane spiral/roadrunner
